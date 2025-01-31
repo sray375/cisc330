@@ -1,1 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lana Del Rey's Café</title>
+</head>
+<body>
 
+    <h1>Welcome to Lana Del Rey's Café</h1>
+    <p>We serve coffee and biscuits while playing only Lana Del Rey songs!</p>
+
+    <h2>Our Service</h2>
+    <p>Enjoy a warm cup of coffee with a side of delicious biscuits.</p>
+
+    <img src="cisc330/Lana_Del_Rey_Wallpaper.jpg" alt="Lana Del Rey Café">
+
+    <h2>Contact Us</h2>
+    <form onsubmit="myFunction">        
+        <label for="first-name">First Name:</label>
+        <input type="text" id="first-name" name="first-name" required>
+        <br><br>
+
+        <label for="last-name">Last Name:</label>
+        <input type="text" id="last-name" name="last-name" required>
+        <br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+</body>
+</html>
