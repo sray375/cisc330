@@ -1,0 +1,22 @@
+<!DOCTYPE html> 
+<html lang = "en"> 
+    <head> 
+        <meta charset="UFT-8">
+    </head> 
+
+    <body> 
+        <script> 
+            let str = "8"; 
+            let num = 5; 
+            let result = str + num; 
+            console.log("Adding a string and a number:", result);
+            
+            console.log(Number(true));
+            console.log(Number(false));
+
+            console.log(Boolean(0));
+            console.log(Boolean("0"));
+            console.log(Boolean(1));
+        </script>
+    </body>
+    </html>
