@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fordham University: Computer Science</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header Section -->
+  <header class="header">
+    <h1>Fordham University: Computer Science</h1>
+    <nav>
+      <ul class="nav-list">
+        <li>Degree Options: Major, Minor</a></li>
+        <li><a Location: Rose hill, Lincoln Center</a></li>
+        <li><a href="Computer and Info Science Department">Visit</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero section -->
+  <section class="hero">
+    <div class="hero-text">
+      <h2>Wherever there’s a computer, there’s a skilled person developing, maintaining, hacking, advancing or simply using it. Be that person.
+
+</h2>
+      
+    </div>
+  </section>
+
+  <!-- About section -->
+  <section id="about" class="section">
+    
+    <p>
+It’s difficult to imagine life without computers when they’re so central to our information-driven global society. But it’s not difficult to imagine the amazing pursuits you’ll be prepared for with a degree in computer science from Fordham’s department of Computer and Information Sciences.
+
+The computer science major emphasizes science and technology, including software design and programming, computer architecture and functions, and the development of an ability to analyze and solve problems in using the computer as a tool.
+
+Get inspired by the classes we offer. Programming. Bioinformatics. Robotics. Video game design. Cyber security. Networking. Database management. Health and medical informatics.
+
+Our faculty members are active researchers driven by intellectual curiosity and the desire to make an impact. Join them in one of our labs. Requirements: open mind, warm heart, and lots of passion.
+
+You’ll learn more than computer science here. You’ll also study philosophy, theology, history, mathematics, languages, and the performing arts through Fordham’s common core curriculum, the centerpiece of our liberal arts education. We want you to excel in your field—and as a human being.    </p>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <p>&copy; <span id="year"></span> Fordham University. All rights reserved.</p>
+  </footer>
+
+  <script>
+    
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
