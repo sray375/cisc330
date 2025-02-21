@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> JS Questions</title>
+</head>
+<body>
+    <h1>Cat Array </h1>
+    <script>
+        // question 6
+        const cats = [
+            { name: 'Charlie', adoptionStatus: 'available' },
+            { name: 'Lily', adoptionStatus: 'not-available' },
+            { name: 'Coco', adoptionStatus: 'available' },
+            { name: 'Oreo', adoptionStatus: 'not-available' },
+            { name: 'Luna', adoptionStatus: 'available' },
+            { name: 'Milo', adoptionStatus: 'available' },
+            { name: 'Lola', adoptionStatus: 'not-available' },
+            { name: 'Leo', adoptionStatus: 'available' },
+            { name: 'Willow', adoptionStatus: 'available' },
+            { name: 'Bella', adoptionStatus: 'not-available' },
+            { name: 'Max', adoptionStatus: 'available' },
+            { name: 'Cleo', adoptionStatus: 'available' },
+            { name: 'Lucy', adoptionStatus: 'not-available' },
+            { name: 'Daisy', adoptionStatus: 'available' },
+        ];
+
+        console.log("question 6 output:");
+        const availableCats = cats
+            .filter(cat => cat.adoptionStatus === 'available')
+            .map(cat => cat.name); 
+        console.log("available cats:", availableCats);
+        const adoptionMessage = `Your newly adopted cats are: ${availableCats.join(", ")}.`;
+        console.log(adoptionMessage);
+
+        // question 7
+        console.log("\nauestion 7 Output:");
+        const randomValue = Math.random() * 10;
+        const randomMessage = randomValue > 5 ? "greater than five!" : "less than five!";
+        console.log(`random value: ${randomValue}, message: ${randomMessage}`);
+
+        // question 8
+        console.log("\nquestion 8 output:");
+        const cat = { 
+            name: "Pinecone", 
+            age: 13, 
+            type: 'Munchkin', 
+            cuteness: 9001 
+        };
+        for (let property in cat) {
+            if (cat.hasOwnProperty(property)) {
+                console.log(`${property}: ${cat[property]}`);
+            }
+        }
+
+        //question 9
+        console.log("\nquestion 9 output:");
+        const intValue = 1;
+        const stringValue = '1';
+
+        if (intValue == stringValue) {
+            console.log("intValue and stringValue are considered equal.");
+        }
+
+        if (intValue === stringValue) {
+            console.log("intValue and stringValue are considered equal.");
+        } else {
+            console.log("intValue and stringValue are not equal.");
+        }
+
+        //question 10
+        console.log("\nquestion 10 output:");
+        const cuteCatNames = cats.map(cat => `${cat.name} is cute!`);
+        console.log(cuteCatNames);
+    </script>
+</body>
+</html>
