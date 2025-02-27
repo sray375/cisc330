@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHP with jQuery</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#fetchData").click(function(){
+                $.ajax({
+                    url: window.location.href, // Calls index.php, which processes API logic
+                    type: "GET",
+                    dataType: "json",
+                    success: function(response) {
+                        let output = "<ul>";
+                        response.forEach(client => {
+                            output += `<li><strong>Name:</strong> ${client.name}, <strong>Price:</strong> ${client.price}</li>`;
+                        });
+                        output += "</ul>";
+                        $("#result").html(output);
+                    },
+                    error: function() {
+                        $("#result").html("<p style='color: red;'>Error fetching data</p>");
+                    }
+                });
+            });
+
+            $("#submitForm").click(function(){
+                $.ajax({
+                    url: window.location.href + "/form", // Calls index.php/form for POST request
+                    type: "POST",
+                    dataType: "json",
+                    success: function(response) {
+                        $("#formResult").html("<p style='color: green;'><strong>" + response.message + "</strong></p>");
+                    },
+                    error: function() {
+                        $("#formResult").html("<p style='color: red;'>Form submission failed</p>");
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+
+    <h2>PHP and jQuery AJAX Example</h2>
+    
+    <button id="fetchData">Fetch Data</button>
+    <div id="result"></div>
+
+    <h3>Submit Form</h3>
+    <button id="submitForm">Submit</button>
+    <div id="formResult"></div>
+
+</body>
+</html>
