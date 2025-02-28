@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework 5 - Modified</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .response-message {
+            text-align: center;
+            color: green;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        .form-container {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <h2>Submit Your Info</h2>
+    <form id="custom-form">
+        <div>
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" required>
+        </div>
+        <br>
+        <div>
+            <label for="animal">Favorite Animal:</label>
+            <input type="text" id="animal" required>
+        </div>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+<div id="response-data"></div>
+
+<script>
+    $(document).ready(function() {
+        $('#custom-form').on('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = {
+                name: $('#name').val(),
+                animal: $('#animal').val()
+            };
+
+            $.ajax({
+                url: 'http://localhost:8888/problem10.php', 
+                type: "POST",
+                data: JSON.stringify(formData),
+                contentType: "application/json",
+                dataType: "json",
+                success: function(response) {
+                    $("#response-data").html(`
+                        <div class="response-message">${response.message}</div>
+                        <div class="response-message">Name: ${response.received_name}</div>
+                        <div class="response-message">Favorite Animal: ${response.received_animal}</div>
+                    `);
+                },
+                error: function() {
+                    $("#response-data").html(`<div class="response-message" style="color: red;">Something went wrong!</div>`);
+                }
+            });
+        });
+    });
+</script>
+
+</body>
+</html>
