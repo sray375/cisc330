@@ -1,0 +1,23 @@
+.margin-thirty {
+    margin-top: 30px;
+}
+
+.product-entry {
+    padding: 10px;
+    margin: 10px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.highlight {
+    font-weight: bold;
+    color: #4CAF50;
+}
+
+.product-name {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.product-description {
+    color: #555;
+}
