@@ -1,1 +1,55 @@
+/* Custom styling for the product view page */
+body {
+    background-color: #f5f5f5;
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    margin-top: 50px;
+}
+
+.product-title {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #0064D2; /* Frog's Delight blue */
+}
+
+.product-description {
+    font-size: 1.25em;
+    color: #333;
+}
+
+.product-created-at {
+    display: block;
+    margin-top: 10px;
+    color: #777;
+}
+
+.product-actions {
+    margin-top: 30px;
+}
+
+.product-actions a {
+    margin: 5px;
+}
+
+.product-actions .btn {
+    font-size: 1em;
+    padding: 10px 20px;
+}
+
+.product-actions .btn-warning {
+    background-color: #F5AF02; /* Froggie's Delight yellow */
+    color: white;
+}
+
+.product-actions .btn-danger {
+    background-color: #E53238; /* Froggie's Delight red */
+    color: white;
+}
+
+.product-actions .btn-secondary {
+    background-color: #8BBF26; /* Froggie's Delight green */
+    color: white;
+}
 
